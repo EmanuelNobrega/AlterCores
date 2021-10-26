@@ -18,18 +18,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/divider2"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toTopOf="@+id/Alpha"
-        app:layout_constraintTop_toBottomOf="@+id/TV_Color"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="1dp" />
 
     <SeekBar
 
