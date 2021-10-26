@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         this.RedColor = findViewById(R.id.Red)
         this.GreenColor = findViewById(R.id.Green)
         this.BlueColor = findViewById(R.id.Blue)
+        
         TvColor.setTextColor(Color.WHITE)
         TvColor.setBackgroundColor(Color.BLACK)
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 TvColor.setBackgroundColor(Color.argb(progress, this@MainActivity.RedColor.progress, this@MainActivity.GreenColor.progress, this@MainActivity.BlueColor.progress))
                 TvColor.text = java.lang.Integer.toHexString(this@MainActivity.Alpha.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.RedColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.GreenColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.BlueColor.progress).toString()
-                color()
+                contrast()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 TvColor.setBackgroundColor(Color.argb(this@MainActivity.Alpha.progress, progress, this@MainActivity.GreenColor.progress, this@MainActivity.BlueColor.progress))
                 TvColor.text = java.lang.Integer.toHexString(this@MainActivity.Alpha.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.RedColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.GreenColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.BlueColor.progress).toString()
-                color()
+                contrast()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 TvColor.setBackgroundColor(Color.argb(this@MainActivity.Alpha.progress, this@MainActivity.RedColor.progress, progress, this@MainActivity.BlueColor.progress))
                 TvColor.text = java.lang.Integer.toHexString(this@MainActivity.Alpha.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.RedColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.GreenColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.BlueColor.progress).toString()
-                color()
+                contrast()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -98,7 +99,7 @@ class MainActivity : AppCompatActivity() {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 TvColor.setBackgroundColor(Color.argb(this@MainActivity.Alpha.progress, this@MainActivity.RedColor.progress, this@MainActivity.GreenColor.progress, progress))
                 TvColor.text = java.lang.Integer.toHexString(this@MainActivity.Alpha.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.RedColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.GreenColor.progress).toString() + java.lang.Integer.toHexString(this@MainActivity.BlueColor.progress).toString()
-                color()
+                contrast()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
@@ -116,7 +117,7 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
-    fun color(){
+    fun contrast(){
         if (this@MainActivity.RedColor.progress + this@MainActivity.GreenColor.progress + this@MainActivity.BlueColor.progress < 120 && this@MainActivity.Alpha.progress > 100){
             TvColor.setTextColor(Color.WHITE)
         }
