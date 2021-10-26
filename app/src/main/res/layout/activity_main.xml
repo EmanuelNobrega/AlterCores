@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TV_Color"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="-78dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toTopOf="@+id/Alpha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/Alpha"
+        app:layout_constraintTop_toBottomOf="@+id/TV_Color"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <SeekBar
+
+        android:id="@+id/Alpha"
+        android:layout_width="341dp"
+        android:layout_height="19dp"
+        android:max="255"
+        android:progress="255"
+        android:thumbTint="@color/black"
+        android:progressTint="#999"
+        app:layout_constraintBottom_toTopOf="@+id/Red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_Color"
+        app:layout_constraintVertical_bias="0.778"/>
+
+    <SeekBar
+        android:id="@+id/Red"
+        android:layout_width="341dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:max="255"
+        android:progress="0"
+        android:thumbTint="#FF0000"
+        android:progressTint="#900"
+        app:layout_constraintBottom_toTopOf="@+id/Green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alpha" />
+
+    <SeekBar
+        android:id="@+id/Green"
+        android:layout_width="341dp"
+        android:layout_height="19dp"
+        android:max="255"
+        android:progress="0"
+        android:thumbTint="#00FF00"
+        android:progressTint="#090"
+        app:layout_constraintTop_toBottomOf="@+id/Red"
+        app:layout_constraintBottom_toTopOf="@+id/Blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <SeekBar
+        android:id="@+id/Blue"
+        android:layout_width="341dp"
+        android:layout_height="19dp"
+        android:max="255"
+        android:progress="0"
+        android:thumbTint="#0000FF"
+        android:progressTint="#009"
+
+        app:layout_constraintTop_toBottomOf="@+id/Green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
